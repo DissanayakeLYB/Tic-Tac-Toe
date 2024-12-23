@@ -1,0 +1,39 @@
+* {
+    margin: 0px;
+}
+
+body{
+    width: 100%;
+}
+
+h1{
+    text-align: center;
+    margin: 1em;
+}
+
+#taskInput {
+    position: relative;
+    width: 50%;
+    align-items: center;
+    padding: 10px;
+    margin: 2em 2em 2em 25em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#addTaskBtn{
+    position: relative;
+    align-items: center;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    justify-content:space-evenly;
+    margin-bottom: 8px;
+}
