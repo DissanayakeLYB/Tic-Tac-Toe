@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe Multiplayer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-elements">
+        <div class="blob blob1"></div>
+        <div class="blob blob2"></div>
+    </div>
+
+    <div class="container">
+        <!-- Lobby Screen -->
+        <div id="lobby-screen" class="screen active">
+            <h1>Tic<span>.</span>Tac<span>.</span>Toe</h1>
+            <p>Play online with your friend!</p>
+            <div class="input-group">
+                <input type="text" id="room-input" placeholder="Enter Room Code" autocomplete="off" maxlength="8">
+                <button id="join-btn">Join Game</button>
+            </div>
+            <div id="error-message" class="error hidden"></div>
+        </div>
+
+        <!-- Game Screen -->
+        <div id="game-screen" class="screen hidden">
+            <div class="header">
+                <h2 id="room-display">Room: </h2>
+                <div class="player-info">
+                    You are: <span id="player-symbol" class="symbol-display"></span>
+                </div>
+            </div>
+
+            <div class="status-bar">
+                <div id="status-message">Waiting for opponent...</div>
+            </div>
+
+            <div class="board" id="board">
+                <div class="cell" data-index="0"></div>
+                <div class="cell" data-index="1"></div>
+                <div class="cell" data-index="2"></div>
+                <div class="cell" data-index="3"></div>
+                <div class="cell" data-index="4"></div>
+                <div class="cell" data-index="5"></div>
+                <div class="cell" data-index="6"></div>
+                <div class="cell" data-index="7"></div>
+                <div class="cell" data-index="8"></div>
+            </div>
+
+            <div class="controls">
+                <button id="restart-btn" class="hidden">Play Again</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Load Socket.IO from server -->
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
