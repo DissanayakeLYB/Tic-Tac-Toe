@@ -1,4 +1,9 @@
-const socket = io();
+// Set the backend URL based on environment
+const BACKEND_URL = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' 
+    ? 'http://localhost:3000' 
+    : 'https://your-backend-url.onrender.com'; // TODO: Update with your Render URL
+
+const socket = io(BACKEND_URL);
 
 // UI Elements
 const lobbyScreen = document.getElementById('lobby-screen');
